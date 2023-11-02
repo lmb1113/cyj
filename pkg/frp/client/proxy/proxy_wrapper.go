@@ -25,12 +25,12 @@ import (
 
 	"github.com/fatedier/golib/errors"
 
-	"qh-tool/pkg/frp/client/event"
-	"qh-tool/pkg/frp/client/health"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/msg"
-	"qh-tool/pkg/frp/pkg/transport"
-	"qh-tool/pkg/frp/pkg/util/xlog"
+	"cyj/pkg/frp/client/event"
+	"cyj/pkg/frp/client/health"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/transport"
+	"cyj/pkg/frp/pkg/util/xlog"
 )
 
 const (

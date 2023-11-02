@@ -28,10 +28,10 @@ import (
 
 	"github.com/samber/lo"
 
-	"qh-tool/pkg/frp/client/proxy"
-	"qh-tool/pkg/frp/pkg/config"
-	"qh-tool/pkg/frp/pkg/config/v1/validation"
-	"qh-tool/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/client/proxy"
+	"cyj/pkg/frp/pkg/config"
+	"cyj/pkg/frp/pkg/config/v1/validation"
+	"cyj/pkg/frp/pkg/util/log"
 )
 
 type GeneralResponse struct {

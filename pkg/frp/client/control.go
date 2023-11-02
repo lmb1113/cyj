@@ -25,13 +25,13 @@ import (
 	"github.com/fatedier/golib/crypto"
 	"github.com/samber/lo"
 
-	"qh-tool/pkg/frp/client/proxy"
-	"qh-tool/pkg/frp/client/visitor"
-	"qh-tool/pkg/frp/pkg/auth"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/msg"
-	"qh-tool/pkg/frp/pkg/transport"
-	"qh-tool/pkg/frp/pkg/util/xlog"
+	"cyj/pkg/frp/client/proxy"
+	"cyj/pkg/frp/client/visitor"
+	"cyj/pkg/frp/pkg/auth"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/transport"
+	"cyj/pkg/frp/pkg/util/xlog"
 )
 
 type Control struct {

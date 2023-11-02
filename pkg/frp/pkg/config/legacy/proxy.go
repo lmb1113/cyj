@@ -20,7 +20,7 @@ import (
 
 	"gopkg.in/ini.v1"
 
-	"qh-tool/pkg/frp/pkg/config/types"
+	"cyj/pkg/frp/pkg/config/types"
 )
 
 type ProxyType string

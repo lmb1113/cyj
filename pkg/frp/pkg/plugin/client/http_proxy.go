@@ -26,9 +26,9 @@ import (
 	libio "github.com/fatedier/golib/io"
 	libnet "github.com/fatedier/golib/net"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	utilnet "qh-tool/pkg/frp/pkg/util/net"
-	"qh-tool/pkg/frp/pkg/util/util"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	utilnet "cyj/pkg/frp/pkg/util/net"
+	"cyj/pkg/frp/pkg/util/util"
 )
 
 func init() {

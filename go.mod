@@ -1,4 +1,4 @@
-module qh-tool
+module cyj
 
 go 1.20
 

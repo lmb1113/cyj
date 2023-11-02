@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"time"
 
-	flog "qh-tool/pkg/frp/pkg/util/log"
-	"qh-tool/pkg/frp/test/e2e/pkg/process"
+	flog "cyj/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/test/e2e/pkg/process"
 )
 
 // RunProcesses run multiple processes from templates.

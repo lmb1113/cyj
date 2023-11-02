@@ -20,8 +20,8 @@ import (
 	"net/http"
 	"os"
 
-	frpLog "qh-tool/pkg/frp/pkg/util/log"
-	"qh-tool/pkg/frp/pkg/util/version"
+	frpLog "cyj/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/pkg/util/version"
 )
 
 var NotFoundPagePath = ""
@@ -43,7 +43,7 @@ const (
 <h1>The page you requested was not found.</h1>
 <p>Sorry, the page you are looking for is currently unavailable.<br/>
 Please try again later.</p>
-<p>The server is powered by <a href="https://qh-tool/pkg/frp">frp</a>.</p>
+<p>The server is powered by <a href="https://cyj/pkg/frp">frp</a>.</p>
 <p><em>Faithfully yours, frp.</em></p>
 </body>
 </html>

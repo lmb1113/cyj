@@ -22,9 +22,9 @@ import (
 	"github.com/rodaine/table"
 	"github.com/spf13/cobra"
 
-	"qh-tool/pkg/frp/pkg/config"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	clientsdk "qh-tool/pkg/frp/pkg/sdk/client"
+	"cyj/pkg/frp/pkg/config"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	clientsdk "cyj/pkg/frp/pkg/sdk/client"
 )
 
 func init() {

@@ -20,7 +20,7 @@ import (
 	"reflect"
 	"strconv"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
+	v1 "cyj/pkg/frp/pkg/config/v1"
 )
 
 func init() {

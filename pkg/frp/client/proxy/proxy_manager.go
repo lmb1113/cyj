@@ -23,11 +23,11 @@ import (
 
 	"github.com/samber/lo"
 
-	"qh-tool/pkg/frp/client/event"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/msg"
-	"qh-tool/pkg/frp/pkg/transport"
-	"qh-tool/pkg/frp/pkg/util/xlog"
+	"cyj/pkg/frp/client/event"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/transport"
+	"cyj/pkg/frp/pkg/util/xlog"
 )
 
 type Manager struct {

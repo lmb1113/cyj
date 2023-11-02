@@ -6,7 +6,7 @@ import (
 
 	"github.com/onsi/ginkgo/v2"
 
-	"qh-tool/pkg/frp/test/e2e/framework"
+	"cyj/pkg/frp/test/e2e/framework"
 )
 
 var _ = ginkgo.Describe("[Feature: Heartbeat]", func() {

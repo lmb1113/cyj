@@ -22,12 +22,12 @@ import (
 
 	libio "github.com/fatedier/golib/io"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/util/limit"
-	utilnet "qh-tool/pkg/frp/pkg/util/net"
-	"qh-tool/pkg/frp/pkg/util/util"
-	"qh-tool/pkg/frp/pkg/util/vhost"
-	"qh-tool/pkg/frp/server/metrics"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/util/limit"
+	utilnet "cyj/pkg/frp/pkg/util/net"
+	"cyj/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/util/vhost"
+	"cyj/pkg/frp/server/metrics"
 )
 
 func init() {

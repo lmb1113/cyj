@@ -7,10 +7,10 @@ import (
 
 	"github.com/onsi/ginkgo/v2"
 
-	"qh-tool/pkg/frp/test/e2e/framework"
-	"qh-tool/pkg/frp/test/e2e/framework/consts"
-	"qh-tool/pkg/frp/test/e2e/pkg/cert"
-	"qh-tool/pkg/frp/test/e2e/pkg/port"
+	"cyj/pkg/frp/test/e2e/framework"
+	"cyj/pkg/frp/test/e2e/framework/consts"
+	"cyj/pkg/frp/test/e2e/pkg/cert"
+	"cyj/pkg/frp/test/e2e/pkg/port"
 )
 
 type generalTestConfigures struct {

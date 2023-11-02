@@ -9,13 +9,13 @@ import (
 	"github.com/onsi/ginkgo/v2"
 	pp "github.com/pires/go-proxyproto"
 
-	"qh-tool/pkg/frp/pkg/util/log"
-	"qh-tool/pkg/frp/test/e2e/framework"
-	"qh-tool/pkg/frp/test/e2e/framework/consts"
-	"qh-tool/pkg/frp/test/e2e/mock/server/httpserver"
-	"qh-tool/pkg/frp/test/e2e/mock/server/streamserver"
-	"qh-tool/pkg/frp/test/e2e/pkg/request"
-	"qh-tool/pkg/frp/test/e2e/pkg/rpc"
+	"cyj/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/test/e2e/framework"
+	"cyj/pkg/frp/test/e2e/framework/consts"
+	"cyj/pkg/frp/test/e2e/mock/server/httpserver"
+	"cyj/pkg/frp/test/e2e/mock/server/streamserver"
+	"cyj/pkg/frp/test/e2e/pkg/request"
+	"cyj/pkg/frp/test/e2e/pkg/rpc"
 )
 
 var _ = ginkgo.Describe("[Feature: Real IP]", func() {

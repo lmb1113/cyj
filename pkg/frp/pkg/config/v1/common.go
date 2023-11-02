@@ -15,7 +15,7 @@
 package v1
 
 import (
-	"qh-tool/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/util/util"
 )
 
 type AuthScope string

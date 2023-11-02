@@ -98,7 +98,7 @@ linters-settings:
     sections:
     - standard
     - default
-    - prefix(qh-tool/pkg/frp/)
+    - prefix(cyj/pkg/frp/)
   gosec:
     severity: "low"
     confidence: "low"

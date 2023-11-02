@@ -15,8 +15,8 @@
 package main
 
 import (
-	_ "qh-tool/pkg/frp/assets/frpc"
-	"qh-tool/pkg/frp/cmd/frpc/sub"
+	_ "cyj/pkg/frp/assets/frpc"
+	"cyj/pkg/frp/cmd/frpc/sub"
 )
 
 func main() {

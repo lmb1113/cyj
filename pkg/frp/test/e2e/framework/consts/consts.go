@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"qh-tool/pkg/frp/test/e2e/pkg/port"
+	"cyj/pkg/frp/test/e2e/pkg/port"
 )
 
 const (

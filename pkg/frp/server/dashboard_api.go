@@ -20,11 +20,11 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"qh-tool/pkg/frp/pkg/config/types"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/metrics/mem"
-	"qh-tool/pkg/frp/pkg/util/log"
-	"qh-tool/pkg/frp/pkg/util/version"
+	"cyj/pkg/frp/pkg/config/types"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/metrics/mem"
+	"cyj/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/pkg/util/version"
 )
 
 type GeneralResponse struct {

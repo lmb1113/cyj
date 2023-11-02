@@ -1,8 +1,8 @@
 package global
 
 import (
+	"cyj/utils"
 	"fmt"
-	"qh-tool/utils"
 	"sync"
 )
 

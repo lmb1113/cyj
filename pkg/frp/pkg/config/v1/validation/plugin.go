@@ -17,7 +17,7 @@ package validation
 import (
 	"errors"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
+	v1 "cyj/pkg/frp/pkg/config/v1"
 )
 
 func ValidateClientPluginOptions(c v1.ClientPluginOptions) error {

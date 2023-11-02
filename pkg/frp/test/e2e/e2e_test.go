@@ -8,15 +8,15 @@ import (
 
 	_ "github.com/onsi/ginkgo/v2"
 
-	"qh-tool/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/pkg/util/log"
 	// test source
-	"qh-tool/pkg/frp/test/e2e/framework"
-	_ "qh-tool/pkg/frp/test/e2e/legacy/basic"
-	_ "qh-tool/pkg/frp/test/e2e/legacy/features"
-	_ "qh-tool/pkg/frp/test/e2e/legacy/plugin"
-	_ "qh-tool/pkg/frp/test/e2e/v1/basic"
-	_ "qh-tool/pkg/frp/test/e2e/v1/features"
-	_ "qh-tool/pkg/frp/test/e2e/v1/plugin"
+	"cyj/pkg/frp/test/e2e/framework"
+	_ "cyj/pkg/frp/test/e2e/legacy/basic"
+	_ "cyj/pkg/frp/test/e2e/legacy/features"
+	_ "cyj/pkg/frp/test/e2e/legacy/plugin"
+	_ "cyj/pkg/frp/test/e2e/v1/basic"
+	_ "cyj/pkg/frp/test/e2e/v1/features"
+	_ "cyj/pkg/frp/test/e2e/v1/plugin"
 )
 
 // handleFlags sets up all flags and parses the command line.

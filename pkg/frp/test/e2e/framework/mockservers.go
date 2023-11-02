@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"os"
 
-	"qh-tool/pkg/frp/test/e2e/framework/consts"
-	"qh-tool/pkg/frp/test/e2e/mock/server"
-	"qh-tool/pkg/frp/test/e2e/mock/server/httpserver"
-	"qh-tool/pkg/frp/test/e2e/mock/server/streamserver"
-	"qh-tool/pkg/frp/test/e2e/pkg/port"
+	"cyj/pkg/frp/test/e2e/framework/consts"
+	"cyj/pkg/frp/test/e2e/mock/server"
+	"cyj/pkg/frp/test/e2e/mock/server/httpserver"
+	"cyj/pkg/frp/test/e2e/mock/server/streamserver"
+	"cyj/pkg/frp/test/e2e/pkg/port"
 )
 
 const (

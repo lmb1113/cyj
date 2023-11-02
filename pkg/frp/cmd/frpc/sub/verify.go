@@ -20,8 +20,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"qh-tool/pkg/frp/pkg/config"
-	"qh-tool/pkg/frp/pkg/config/v1/validation"
+	"cyj/pkg/frp/pkg/config"
+	"cyj/pkg/frp/pkg/config/v1/validation"
 )
 
 func init() {

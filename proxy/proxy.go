@@ -1,12 +1,12 @@
 package proxy
 
 import (
+	"cyj/global"
+	client2 "cyj/pkg/frp/client"
+	"cyj/pkg/frp/cmd/frpc/sub"
+	"cyj/utils"
 	"errors"
 	"fmt"
-	"qh-tool/global"
-	client2 "qh-tool/pkg/frp/client"
-	"qh-tool/pkg/frp/cmd/frpc/sub"
-	"qh-tool/utils"
 	"strconv"
 	"strings"
 )

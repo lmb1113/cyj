@@ -21,12 +21,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"qh-tool/pkg/frp/pkg/config"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/config/v1/validation"
-	"qh-tool/pkg/frp/pkg/util/log"
-	"qh-tool/pkg/frp/pkg/util/version"
-	"qh-tool/pkg/frp/server"
+	"cyj/pkg/frp/pkg/config"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/config/v1/validation"
+	"cyj/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/pkg/util/version"
+	"cyj/pkg/frp/server"
 )
 
 var (
@@ -45,7 +45,7 @@ func init() {
 
 var rootCmd = &cobra.Command{
 	Use:   "frps",
-	Short: "frps is the server of frp (https://qh-tool/pkg/frp)",
+	Short: "frps is the server of frp (https://cyj/pkg/frp)",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if showVersion {
 			fmt.Println(version.Full())

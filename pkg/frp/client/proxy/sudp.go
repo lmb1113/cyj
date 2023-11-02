@@ -25,11 +25,11 @@ import (
 	"github.com/fatedier/golib/errors"
 	libio "github.com/fatedier/golib/io"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/msg"
-	"qh-tool/pkg/frp/pkg/proto/udp"
-	"qh-tool/pkg/frp/pkg/util/limit"
-	utilnet "qh-tool/pkg/frp/pkg/util/net"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/proto/udp"
+	"cyj/pkg/frp/pkg/util/limit"
+	utilnet "cyj/pkg/frp/pkg/util/net"
 )
 
 func init() {

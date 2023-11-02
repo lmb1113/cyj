@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"qh-tool/update"
-	"qh-tool/utils"
+	"cyj/update"
+	"cyj/utils"
 )
 
 // App struct

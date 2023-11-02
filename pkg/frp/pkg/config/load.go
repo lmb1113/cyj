@@ -16,12 +16,12 @@ package config
 
 import (
 	"bytes"
+	"cyj/global"
 	"encoding/json"
 	"fmt"
 	"html/template"
 	"os"
 	"path/filepath"
-	"qh-tool/global"
 	"strings"
 
 	toml "github.com/pelletier/go-toml/v2"
@@ -30,11 +30,11 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/yaml"
 
-	"qh-tool/pkg/frp/pkg/config/legacy"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/config/v1/validation"
-	"qh-tool/pkg/frp/pkg/msg"
-	"qh-tool/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/config/legacy"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/config/v1/validation"
+	"cyj/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/util/util"
 )
 
 var glbEnvs map[string]string

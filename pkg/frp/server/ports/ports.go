@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"qh-tool/pkg/frp/pkg/config/types"
+	"cyj/pkg/frp/pkg/config/types"
 )
 
 const (

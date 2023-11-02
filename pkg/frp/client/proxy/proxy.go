@@ -29,13 +29,13 @@ import (
 	pp "github.com/pires/go-proxyproto"
 	"golang.org/x/time/rate"
 
-	"qh-tool/pkg/frp/pkg/config/types"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/msg"
-	plugin "qh-tool/pkg/frp/pkg/plugin/client"
-	"qh-tool/pkg/frp/pkg/transport"
-	"qh-tool/pkg/frp/pkg/util/limit"
-	"qh-tool/pkg/frp/pkg/util/xlog"
+	"cyj/pkg/frp/pkg/config/types"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/msg"
+	plugin "cyj/pkg/frp/pkg/plugin/client"
+	"cyj/pkg/frp/pkg/transport"
+	"cyj/pkg/frp/pkg/util/limit"
+	"cyj/pkg/frp/pkg/util/xlog"
 )
 
 var proxyFactoryRegistry = map[reflect.Type]func(*BaseProxy, v1.ProxyConfigurer) Proxy{}

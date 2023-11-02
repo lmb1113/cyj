@@ -20,9 +20,9 @@ import (
 	"reflect"
 	"strings"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/util/util"
-	"qh-tool/pkg/frp/pkg/util/vhost"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/util/vhost"
 )
 
 func init() {

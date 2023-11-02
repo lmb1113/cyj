@@ -22,9 +22,9 @@ import (
 
 	"github.com/samber/lo"
 
-	"qh-tool/pkg/frp/pkg/config/types"
-	"qh-tool/pkg/frp/pkg/msg"
-	"qh-tool/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/config/types"
+	"cyj/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/util/util"
 )
 
 type ProxyTransport struct {

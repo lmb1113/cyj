@@ -33,16 +33,16 @@ import (
 	quic "github.com/quic-go/quic-go"
 	"github.com/samber/lo"
 
-	"qh-tool/pkg/frp/assets"
-	"qh-tool/pkg/frp/pkg/auth"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/msg"
-	"qh-tool/pkg/frp/pkg/transport"
-	"qh-tool/pkg/frp/pkg/util/log"
-	utilnet "qh-tool/pkg/frp/pkg/util/net"
-	"qh-tool/pkg/frp/pkg/util/util"
-	"qh-tool/pkg/frp/pkg/util/version"
-	"qh-tool/pkg/frp/pkg/util/xlog"
+	"cyj/pkg/frp/assets"
+	"cyj/pkg/frp/pkg/auth"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/transport"
+	"cyj/pkg/frp/pkg/util/log"
+	utilnet "cyj/pkg/frp/pkg/util/net"
+	"cyj/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/util/version"
+	"cyj/pkg/frp/pkg/util/xlog"
 )
 
 func init() {

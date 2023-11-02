@@ -1,6 +1,7 @@
 package main
 
 import (
+	"cyj/proxy"
 	"embed"
 	_ "github.com/icza/mjpeg"
 	"github.com/wailsapp/wails/v2"
@@ -12,7 +13,6 @@ import (
 	"github.com/wailsapp/wails/v2/pkg/options/windows"
 	"log"
 	_ "net/http/pprof"
-	"qh-tool/proxy"
 )
 
 //go:embed frontend/dist

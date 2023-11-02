@@ -22,7 +22,7 @@ import (
 
 	"github.com/samber/lo"
 
-	"qh-tool/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/util/util"
 )
 
 type VisitorTransport struct {

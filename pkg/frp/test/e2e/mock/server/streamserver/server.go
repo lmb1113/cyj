@@ -7,8 +7,8 @@ import (
 	"net"
 	"strconv"
 
-	libnet "qh-tool/pkg/frp/pkg/util/net"
-	"qh-tool/pkg/frp/test/e2e/pkg/rpc"
+	libnet "cyj/pkg/frp/pkg/util/net"
+	"cyj/pkg/frp/test/e2e/pkg/rpc"
 )
 
 type Type string

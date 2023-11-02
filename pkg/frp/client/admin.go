@@ -22,8 +22,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"qh-tool/pkg/frp/assets"
-	utilnet "qh-tool/pkg/frp/pkg/util/net"
+	"cyj/pkg/frp/assets"
+	utilnet "cyj/pkg/frp/pkg/util/net"
 )
 
 var (

@@ -9,10 +9,10 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/onsi/ginkgo/v2"
 
-	"qh-tool/pkg/frp/test/e2e/framework"
-	"qh-tool/pkg/frp/test/e2e/framework/consts"
-	"qh-tool/pkg/frp/test/e2e/mock/server/httpserver"
-	"qh-tool/pkg/frp/test/e2e/pkg/request"
+	"cyj/pkg/frp/test/e2e/framework"
+	"cyj/pkg/frp/test/e2e/framework/consts"
+	"cyj/pkg/frp/test/e2e/mock/server/httpserver"
+	"cyj/pkg/frp/test/e2e/pkg/request"
 )
 
 var _ = ginkgo.Describe("[Feature: HTTP]", func() {

@@ -3,7 +3,7 @@ package frpc
 import (
 	"embed"
 
-	"qh-tool/pkg/frp/assets"
+	"cyj/pkg/frp/assets"
 )
 
 //go:embed static/*

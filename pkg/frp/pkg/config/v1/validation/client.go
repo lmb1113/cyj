@@ -21,7 +21,7 @@ import (
 
 	"github.com/samber/lo"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
+	v1 "cyj/pkg/frp/pkg/config/v1"
 )
 
 func ValidateClientCommonConfig(c *v1.ClientCommonConfig) (Warning, error) {

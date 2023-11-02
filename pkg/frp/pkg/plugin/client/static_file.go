@@ -22,8 +22,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	utilnet "qh-tool/pkg/frp/pkg/util/net"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	utilnet "cyj/pkg/frp/pkg/util/net"
 )
 
 func init() {

@@ -20,9 +20,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"qh-tool/pkg/frp/pkg/config"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/nathole"
+	"cyj/pkg/frp/pkg/config"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/nathole"
 )
 
 var (

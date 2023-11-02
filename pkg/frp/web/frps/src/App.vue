@@ -67,7 +67,7 @@ const toggleDark = useToggle(isDark)
 
 const handleSelect = (key: string) => {
   if (key == '') {
-    window.open('https://qh-tool/pkg/frp')
+    window.open('https://cyj/pkg/frp')
   }
 }
 </script>

@@ -21,7 +21,7 @@ import (
 	"strings"
 	"time"
 
-	"qh-tool/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/util/util"
 )
 
 type HTTPAuthWraper struct {

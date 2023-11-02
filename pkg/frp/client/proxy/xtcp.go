@@ -23,11 +23,11 @@ import (
 	fmux "github.com/hashicorp/yamux"
 	"github.com/quic-go/quic-go"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/msg"
-	"qh-tool/pkg/frp/pkg/nathole"
-	"qh-tool/pkg/frp/pkg/transport"
-	utilnet "qh-tool/pkg/frp/pkg/util/net"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/nathole"
+	"cyj/pkg/frp/pkg/transport"
+	utilnet "cyj/pkg/frp/pkg/util/net"
 )
 
 func init() {

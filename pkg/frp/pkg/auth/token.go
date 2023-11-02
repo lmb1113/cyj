@@ -20,9 +20,9 @@ import (
 
 	"github.com/samber/lo"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/msg"
-	"qh-tool/pkg/frp/pkg/util/util"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/util/util"
 )
 
 type TokenAuthSetterVerifier struct {

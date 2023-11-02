@@ -15,9 +15,9 @@
 package aggregate
 
 import (
-	"qh-tool/pkg/frp/pkg/metrics/mem"
-	"qh-tool/pkg/frp/pkg/metrics/prometheus"
-	"qh-tool/pkg/frp/server/metrics"
+	"cyj/pkg/frp/pkg/metrics/mem"
+	"cyj/pkg/frp/pkg/metrics/prometheus"
+	"cyj/pkg/frp/server/metrics"
 )
 
 // EnableMem start to mark metrics to memory monitor system.

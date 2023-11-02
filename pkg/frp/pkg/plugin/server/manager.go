@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"qh-tool/pkg/frp/pkg/util/util"
-	"qh-tool/pkg/frp/pkg/util/xlog"
+	"cyj/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/util/xlog"
 )
 
 type Manager struct {

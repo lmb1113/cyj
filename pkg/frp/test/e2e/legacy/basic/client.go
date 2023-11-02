@@ -8,10 +8,10 @@ import (
 
 	"github.com/onsi/ginkgo/v2"
 
-	clientsdk "qh-tool/pkg/frp/pkg/sdk/client"
-	"qh-tool/pkg/frp/test/e2e/framework"
-	"qh-tool/pkg/frp/test/e2e/framework/consts"
-	"qh-tool/pkg/frp/test/e2e/pkg/request"
+	clientsdk "cyj/pkg/frp/pkg/sdk/client"
+	"cyj/pkg/frp/test/e2e/framework"
+	"cyj/pkg/frp/test/e2e/framework/consts"
+	"cyj/pkg/frp/test/e2e/pkg/request"
 )
 
 var _ = ginkgo.Describe("[Feature: ClientManage]", func() {

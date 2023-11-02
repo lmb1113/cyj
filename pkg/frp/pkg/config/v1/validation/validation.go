@@ -17,8 +17,8 @@ package validation
 import (
 	"errors"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	splugin "qh-tool/pkg/frp/pkg/plugin/server"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	splugin "cyj/pkg/frp/pkg/plugin/server"
 )
 
 var (

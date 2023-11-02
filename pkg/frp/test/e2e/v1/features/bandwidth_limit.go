@@ -7,12 +7,12 @@ import (
 
 	"github.com/onsi/ginkgo/v2"
 
-	plugin "qh-tool/pkg/frp/pkg/plugin/server"
-	"qh-tool/pkg/frp/test/e2e/framework"
-	"qh-tool/pkg/frp/test/e2e/framework/consts"
-	"qh-tool/pkg/frp/test/e2e/mock/server/streamserver"
-	pluginpkg "qh-tool/pkg/frp/test/e2e/pkg/plugin"
-	"qh-tool/pkg/frp/test/e2e/pkg/request"
+	plugin "cyj/pkg/frp/pkg/plugin/server"
+	"cyj/pkg/frp/test/e2e/framework"
+	"cyj/pkg/frp/test/e2e/framework/consts"
+	"cyj/pkg/frp/test/e2e/mock/server/streamserver"
+	pluginpkg "cyj/pkg/frp/test/e2e/pkg/plugin"
+	"cyj/pkg/frp/test/e2e/pkg/request"
 )
 
 var _ = ginkgo.Describe("[Feature: Bandwidth Limit]", func() {

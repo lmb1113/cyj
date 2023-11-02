@@ -15,7 +15,7 @@
 package xlog
 
 import (
-	"qh-tool/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/pkg/util/log"
 )
 
 // Logger is not thread safety for operations on prefix

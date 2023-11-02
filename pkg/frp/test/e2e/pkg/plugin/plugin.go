@@ -6,9 +6,9 @@ import (
 	"io"
 	"net/http"
 
-	plugin "qh-tool/pkg/frp/pkg/plugin/server"
-	"qh-tool/pkg/frp/pkg/util/log"
-	"qh-tool/pkg/frp/test/e2e/mock/server/httpserver"
+	plugin "cyj/pkg/frp/pkg/plugin/server"
+	"cyj/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/test/e2e/mock/server/httpserver"
 )
 
 type Handler func(req *plugin.Request) *plugin.Response

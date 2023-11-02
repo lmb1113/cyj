@@ -24,8 +24,8 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"qh-tool/pkg/frp/assets"
-	utilnet "qh-tool/pkg/frp/pkg/util/net"
+	"cyj/pkg/frp/assets"
+	utilnet "cyj/pkg/frp/pkg/util/net"
 )
 
 var (

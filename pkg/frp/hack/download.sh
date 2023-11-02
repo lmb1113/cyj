@@ -12,7 +12,7 @@ fi
 
 # Determine the latest version by version number ignoring alpha, beta, and rc versions.
 if [ "${FRP_VERSION}" = "" ] ; then
-  FRP_VERSION="$(curl -sL https://qh-tool/pkg/frp/releases | \
+  FRP_VERSION="$(curl -sL https://cyj/pkg/frp/releases | \
                   grep -o 'releases/tag/v[0-9]*.[0-9]*.[0-9]*"' | sort -V | \
                   tail -1 | awk -F'/' '{ print $3}')"
   FRP_VERSION="${FRP_VERSION%?}"
@@ -30,7 +30,7 @@ if [ "${OS}" = "windows" ] ; then
 fi
 NAME="frp_${FRP_VERSION}_${OS}_${ARCH}${SUFFIX}"
 DIR_NAME="frp_${FRP_VERSION}_${OS}_${ARCH}"
-URL="https://qh-tool/pkg/frp/releases/download/v${FRP_VERSION}/${NAME}"
+URL="https://cyj/pkg/frp/releases/download/v${FRP_VERSION}/${NAME}"
 
 download_and_extract() {
   printf "Downloading %s from %s ...\n" "$NAME" "${URL}"

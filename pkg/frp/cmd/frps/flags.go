@@ -19,8 +19,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"qh-tool/pkg/frp/pkg/config/types"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/config/types"
+	v1 "cyj/pkg/frp/pkg/config/v1"
 )
 
 type PortsRangeSliceFlag struct {

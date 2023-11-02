@@ -6,11 +6,11 @@ import (
 
 	"github.com/onsi/ginkgo/v2"
 
-	plugin "qh-tool/pkg/frp/pkg/plugin/server"
-	"qh-tool/pkg/frp/pkg/transport"
-	"qh-tool/pkg/frp/test/e2e/framework"
-	"qh-tool/pkg/frp/test/e2e/framework/consts"
-	pluginpkg "qh-tool/pkg/frp/test/e2e/pkg/plugin"
+	plugin "cyj/pkg/frp/pkg/plugin/server"
+	"cyj/pkg/frp/pkg/transport"
+	"cyj/pkg/frp/test/e2e/framework"
+	"cyj/pkg/frp/test/e2e/framework/consts"
+	pluginpkg "cyj/pkg/frp/test/e2e/pkg/plugin"
 )
 
 var _ = ginkgo.Describe("[Feature: Server-Plugins]", func() {

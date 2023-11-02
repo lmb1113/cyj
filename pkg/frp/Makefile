@@ -20,7 +20,7 @@ fmt-more:
 	gofumpt -l -w .
 
 gci:
-	gci write -s standard -s default -s "prefix(qh-tool/pkg/frp/)" ./
+	gci write -s standard -s default -s "prefix(cyj/pkg/frp/)" ./
 
 vet:
 	go vet ./...

@@ -31,8 +31,8 @@ import (
 	libio "github.com/fatedier/golib/io"
 	"github.com/fatedier/golib/pool"
 
-	frpLog "qh-tool/pkg/frp/pkg/util/log"
-	"qh-tool/pkg/frp/pkg/util/util"
+	frpLog "cyj/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/pkg/util/util"
 )
 
 var ErrNoRouteFound = errors.New("no route found")

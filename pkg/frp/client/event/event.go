@@ -3,7 +3,7 @@ package event
 import (
 	"errors"
 
-	"qh-tool/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/msg"
 )
 
 var ErrPayloadType = errors.New("error payload type")

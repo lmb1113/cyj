@@ -1,7 +1,7 @@
 package metrics
 
 import (
-	"qh-tool/pkg/frp/pkg/metrics/aggregate"
+	"cyj/pkg/frp/pkg/metrics/aggregate"
 )
 
 var (

@@ -18,9 +18,9 @@ import (
 	"sync"
 	"time"
 
-	"qh-tool/pkg/frp/pkg/util/log"
-	"qh-tool/pkg/frp/pkg/util/metric"
-	server "qh-tool/pkg/frp/server/metrics"
+	"cyj/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/pkg/util/metric"
+	server "cyj/pkg/frp/server/metrics"
 )
 
 var (

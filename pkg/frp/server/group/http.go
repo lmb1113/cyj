@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"qh-tool/pkg/frp/pkg/util/vhost"
+	"cyj/pkg/frp/pkg/util/vhost"
 )
 
 type HTTPGroupController struct {

@@ -15,13 +15,13 @@
 package controller
 
 import (
-	"qh-tool/pkg/frp/pkg/nathole"
-	plugin "qh-tool/pkg/frp/pkg/plugin/server"
-	"qh-tool/pkg/frp/pkg/util/tcpmux"
-	"qh-tool/pkg/frp/pkg/util/vhost"
-	"qh-tool/pkg/frp/server/group"
-	"qh-tool/pkg/frp/server/ports"
-	"qh-tool/pkg/frp/server/visitor"
+	"cyj/pkg/frp/pkg/nathole"
+	plugin "cyj/pkg/frp/pkg/plugin/server"
+	"cyj/pkg/frp/pkg/util/tcpmux"
+	"cyj/pkg/frp/pkg/util/vhost"
+	"cyj/pkg/frp/server/group"
+	"cyj/pkg/frp/server/ports"
+	"cyj/pkg/frp/server/visitor"
 )
 
 // All resource managers and controllers

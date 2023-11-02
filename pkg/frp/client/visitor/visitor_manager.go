@@ -24,9 +24,9 @@ import (
 
 	"github.com/samber/lo"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/transport"
-	"qh-tool/pkg/frp/pkg/util/xlog"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/transport"
+	"cyj/pkg/frp/pkg/util/xlog"
 )
 
 type Manager struct {

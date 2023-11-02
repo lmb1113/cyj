@@ -22,8 +22,8 @@ import (
 	"github.com/samber/lo"
 	"golang.org/x/oauth2/clientcredentials"
 
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/msg"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/msg"
 )
 
 type OidcAuthProvider struct {

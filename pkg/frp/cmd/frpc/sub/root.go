@@ -16,24 +16,24 @@ package sub
 
 import (
 	"context"
+	"cyj/utils"
 	"fmt"
 	"io/fs"
 	"os"
 	"os/signal"
 	"path/filepath"
-	"qh-tool/utils"
 	"sync"
 	"syscall"
 	"time"
 
 	"github.com/spf13/cobra"
 
-	"qh-tool/pkg/frp/client"
-	"qh-tool/pkg/frp/pkg/config"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
-	"qh-tool/pkg/frp/pkg/config/v1/validation"
-	"qh-tool/pkg/frp/pkg/util/log"
-	"qh-tool/pkg/frp/pkg/util/version"
+	"cyj/pkg/frp/client"
+	"cyj/pkg/frp/pkg/config"
+	v1 "cyj/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/config/v1/validation"
+	"cyj/pkg/frp/pkg/util/log"
+	"cyj/pkg/frp/pkg/util/version"
 )
 
 var (
@@ -50,7 +50,7 @@ func init() {
 
 var rootCmd = &cobra.Command{
 	Use:   "frpc",
-	Short: "frpc is the client of frp (https://qh-tool/pkg/frp)",
+	Short: "frpc is the client of frp (https://cyj/pkg/frp)",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if showVersion {
 			fmt.Println(version.Full())

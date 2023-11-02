@@ -19,8 +19,8 @@ import (
 
 	"github.com/samber/lo"
 
-	"qh-tool/pkg/frp/pkg/config/types"
-	v1 "qh-tool/pkg/frp/pkg/config/v1"
+	"cyj/pkg/frp/pkg/config/types"
+	v1 "cyj/pkg/frp/pkg/config/v1"
 )
 
 func Convert_ClientCommonConf_To_v1(conf *ClientCommonConf) *v1.ClientCommonConfig {

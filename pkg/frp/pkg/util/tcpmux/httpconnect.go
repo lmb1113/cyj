@@ -24,8 +24,8 @@ import (
 
 	libnet "github.com/fatedier/golib/net"
 
-	"qh-tool/pkg/frp/pkg/util/util"
-	"qh-tool/pkg/frp/pkg/util/vhost"
+	"cyj/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/pkg/util/vhost"
 )
 
 type HTTPConnectTCPMuxer struct {

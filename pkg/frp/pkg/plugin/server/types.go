@@ -15,7 +15,7 @@
 package plugin
 
 import (
-	"qh-tool/pkg/frp/pkg/msg"
+	"cyj/pkg/frp/pkg/msg"
 )
 
 type Request struct {

@@ -17,7 +17,7 @@ package mem
 import (
 	"time"
 
-	"qh-tool/pkg/frp/pkg/util/metric"
+	"cyj/pkg/frp/pkg/util/metric"
 )
 
 const (

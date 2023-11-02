@@ -17,8 +17,8 @@ package main
 import (
 	"github.com/fatedier/golib/crypto"
 
-	_ "qh-tool/pkg/frp/assets/frps"
-	_ "qh-tool/pkg/frp/pkg/metrics"
+	_ "cyj/pkg/frp/assets/frps"
+	_ "cyj/pkg/frp/pkg/metrics"
 )
 
 func main() {

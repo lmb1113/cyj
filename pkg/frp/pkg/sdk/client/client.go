@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"qh-tool/pkg/frp/client"
-	"qh-tool/pkg/frp/pkg/util/util"
+	"cyj/pkg/frp/client"
+	"cyj/pkg/frp/pkg/util/util"
 )
 
 type Client struct {

@@ -1,6 +1,7 @@
 package update
 
 import (
+	"cyj/global"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -9,7 +10,6 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"qh-tool/global"
 	"strings"
 	"time"
 )
