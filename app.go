@@ -2,6 +2,8 @@ package main
 
 import (
 	"context"
+	"qh-tool/update"
+	"qh-tool/utils"
 )
 
 // App struct
@@ -28,6 +30,13 @@ func (a *App) startup(ctx context.Context) {
 func (a *App) domReady(ctx context.Context) {
 	// Add your action here
 	// 在这里添加你的操作
+	// 更新操作
+	utils.Go(func() {
+		update.DeleteOld()
+	})
+	utils.Go(func() {
+		update.HandleUpdate()
+	})
 }
 
 // beforeClose is called when the application is about to quit,

@@ -73,7 +73,7 @@ func main() {
 				LightModeBorder:            0xffffff,
 				LightModeBorderInactive:    0xffffff,
 			},
-			DisableWindowIcon:                 true,
+			DisableWindowIcon:                 false,
 			DisableFramelessWindowDecorations: false,
 			WebviewUserDataPath:               "",
 			WebviewBrowserPath:                "",
