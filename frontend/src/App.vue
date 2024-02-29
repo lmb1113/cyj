@@ -35,14 +35,36 @@
     </el-row>
     <el-row style="margin-top: 20px;">
       <div class="copyright-div">
-        <p style="font-size: 10px;">©穿云箭 2018-2023 使用协议</p>
-        <p style="font-size: 10px;">version 1.0.1</p>
+        <p style="font-size: 10px;">©穿云箭 2018-2024 使用协议</p>
+        <p style="font-size: 10px;">version 1.0.2</p>
+        <el-link :underline="false" @click="dialogVisible = true" type="primary">使用指南</el-link>
+        <br>
+        <el-link :underline="false" target="_blank" @click="gotoBrowser('https://qm.qq.com/q/lhm1yvQQN4')"
+          type="primary">交流Q群</el-link>
       </div>
     </el-row>
+    <el-dialog title="常见问题指南" :visible.sync="dialogVisible" width="90%">
+      <h5>1.问:什么是穿云箭</h5>
+      <span>答:为爱发电，内网穿透工具，适用于本地服务的外网访问</span>
+      <h5>2.问:可以翻墙么</h5>
+      <span>答:不可以，并非VPN，只是一种内网穿透工具</span>
+      <h5>3.问:浏览器直接访问提示ERR_SSL_PROTOCOL_ERROR</h5>
+      <span>答:检查地址栏是不是https://开头（注意：部分浏览器会自动添加https），一定要使用http访问，因为大部分本地服务都是非https，此工具默认只代理http的服务</span>
+      <h5>4.问:有使用案例么</h5>
+      <span>第一步 例如本地有个spring服务端口是12345 这样代理地址就填写127.0.0.1:12345</span>
+      <br>
+      <span>第二步 点击[开始穿透]</span>
+      <br>
+      <span>第三步 下方会出现类似于 c.0a0a.cn:11111 这样的地址，这是穿透后的外网地址，这个地址任何地点的有网络的设备、浏览器都可以直接进行访问</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="dialogVisible = false">原来是这样</el-button>
+      </span>
+    </el-dialog>
   </div>
-</template>
+</template>   
 <script>
 import { Run, Stop } from '../wailsjs/go/proxy/Options.js'
+import { BrowserOpenURL } from '../wailsjs/runtime/runtime.js'
 export default {
   name: "App",
   data() {
@@ -51,7 +73,8 @@ export default {
       localhost: "127.0.0.1:8080",
       remoteAddr: "",
       mode: 1,
-      recording: false
+      recording: false,
+      dialogVisible: true
     }
   },
   methods: {
@@ -81,6 +104,9 @@ export default {
     },
     copyError() {
       this.$message.error("复制失败")
+    },
+    gotoBrowser(url) {
+      BrowserOpenURL(url)
     }
   }
 };
@@ -146,6 +172,6 @@ export default {
   display: flex;
   justify-content: center;
   text-align: center;
-  flex-direction:column;
+  flex-direction: column;
 }
 </style>
