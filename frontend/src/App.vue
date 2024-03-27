@@ -36,7 +36,7 @@
     <el-row style="margin-top: 20px;">
       <div class="copyright-div">
         <p style="font-size: 10px;">©穿云箭 2018-2024 使用协议</p>
-        <p style="font-size: 10px;">version 1.0.2</p>
+        <p style="font-size: 10px;">version 1.0.3</p>
         <el-link :underline="false" @click="dialogVisible = true" type="primary">使用指南</el-link>
         <br>
         <el-link :underline="false" target="_blank" @click="gotoBrowser('https://qm.qq.com/q/lhm1yvQQN4')"
@@ -51,7 +51,7 @@
       <h5>3.问:浏览器直接访问提示ERR_SSL_PROTOCOL_ERROR</h5>
       <span>答:检查地址栏是不是https://开头（注意：部分浏览器会自动添加https），一定要使用http访问，因为大部分本地服务都是非https，此工具默认只代理http的服务</span>
       <h5>4.问:有使用案例么</h5>
-      <span>第一步 例如本地有个spring服务端口是12345 这样代理地址就填写127.0.0.1:12345</span>
+      <span>第一步 例如本地有个服务端口是12345 这样代理地址就填写127.0.0.1:12345</span>
       <br>
       <span>第二步 点击[开始穿透]</span>
       <br>

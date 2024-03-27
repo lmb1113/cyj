@@ -25,13 +25,13 @@ func NewProxy() *Options {
 
 func (o *Options) Run(addr string) (string, error) {
 	if !utils.ValidateIPPortFormat(addr) {
-		return "", errors.New("格式错误")
+		return "", errors.New("本地地址错误 [ip:端口]")
 	}
 	config := global.NewDefaultConfig()
 
 	info := strings.Split(addr, ":")
 	if len(info) != 2 {
-		return "", errors.New("地址错误")
+		return "", errors.New("本地地址错误 [ip:端口]")
 	}
 
 	config.LocalAddr = info[0]
