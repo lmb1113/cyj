@@ -98,7 +98,8 @@ const startRecording = () => {
         console.log(res)
         remoteAddr.value = res; // 设置返回值 
         MessagePlugin.success("穿透成功")
-        setBodyBg("linear-gradient(-225deg,#FFFEFF ,#c9ffbf 100%)")
+        //todo 更改为流动特效
+        // setBodyBg("linear-gradient(-225deg,#FFFEFF ,#c9ffbf 100%)")
     }).catch((error) => {
         MessagePlugin.error(error)
     })
@@ -108,7 +109,8 @@ const close = () => {
     Stop()
     remoteAddr.value = ""
     MessagePlugin.success("停止成功")
-    setBodyBg("linear-gradient(-225deg, #E3FDF5, #FFE6FA 100%)")
+    //todo 更改为流动特效
+    // setBodyBg("linear-gradient(-225deg, #E3FDF5, #FFE6FA 100%)")
 
 }
 
