@@ -11,9 +11,12 @@ import (
 	"github.com/wailsapp/wails/v2/pkg/options/linux"
 	"github.com/wailsapp/wails/v2/pkg/options/mac"
 	"github.com/wailsapp/wails/v2/pkg/options/windows"
+	"github.com/wailsapp/wails/v2/pkg/runtime"
 	"log"
 	_ "net/http/pprof"
 )
+
+const lockUniqueId = "C04B4B88-2B22-3ADE-9DFE-551EBA430D19"
 
 //go:embed frontend/dist
 var assets embed.FS
@@ -42,7 +45,6 @@ func main() {
 		Menu:              nil,
 		Logger:            nil,
 		LogLevel:          logger.DEBUG,
-		OnStartup:         app.startup,
 		OnDomReady:        app.domReady,
 		OnBeforeClose:     app.beforeClose,
 		OnShutdown:        app.shutdown,
@@ -55,6 +57,11 @@ func main() {
 		Bind: []interface{}{
 			app,
 			proxy.NewProxy(),
+		},
+		OnStartup: app.startup,
+		SingleInstanceLock: &options.SingleInstanceLock{
+			UniqueId:               lockUniqueId,               // 单实例锁
+			OnSecondInstanceLaunch: app.onSecondInstanceLaunch, // 如果重复打开就再次显示窗口
 		},
 		// Windows platform specific options
 		// Windows平台特定选项
@@ -107,4 +114,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func (a *App) onSecondInstanceLaunch(secondInstanceData options.SecondInstanceData) {
+	runtime.WindowUnminimise(a.ctx)
+	runtime.Show(a.ctx)
 }
