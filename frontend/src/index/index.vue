@@ -62,7 +62,7 @@
                         @click="gotoBrowser('https://qm.qq.com/q/lhm1yvQQN4')" hover="color">交流Q群</t-link>
                 </div>
                 <p style="font-size: 10px;">©穿云箭 2018-2024 使用协议</p>
-                <p style="font-size: 10px;">version 1.0.4</p>
+                <p style="font-size: 10px;">version 1.0.5</p>
             </div>
         </t-row>
         <t-dialog title="常见问题指南" v-model:visible="dialogVisible" width="90%"
@@ -71,14 +71,14 @@
             <span>答:为爱发电，内网穿透工具，适用于本地服务的外网访问</span>
             <h5>2.问:可以翻墙么</h5>
             <span>答:不可以，并非VPN，只是一种内网穿透工具</span>
-            <h5>3.问:浏览器直接访问提示ERR_SSL_PROTOCOL_ERROR</h5>
-            <span>答:检查地址栏是不是https://开头（注意：部分浏览器会自动添加https），一定要使用http访问，因为大部分本地服务都是非https，此工具默认只代理http的服务</span>
+            <h5>3.问:浏览器直接访问提示net::ERR_CERT_AUTHORITY_INVALID</h5>
+            <span>答:因为证书问题导致，不影响使用，点击【高级】-【继续前往】</span>
             <h5>4.问:有使用案例么</h5>
             <span>第一步 例如本地有个服务端口是12345 这样代理地址就填写127.0.0.1:12345</span>
             <br>
             <span>第二步 点击[开始穿透]</span>
             <br>
-            <span>第三步 下方会出现类似于 c.0a0a.cn:11111 这样的地址，这是穿透后的外网地址，这个地址任何地点的有网络的设备、浏览器都可以直接进行访问</span>
+            <span>第三步 下方会出现类似于 c.0a0a.cn:11111 这样的地址，这是穿透后的外网地址，这任何地点的有网络的设备、浏览器都可以直接进行访问这个地址</span>
         </t-dialog>
     </div>
 </template>
