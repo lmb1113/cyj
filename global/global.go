@@ -8,7 +8,7 @@ import (
 )
 
 const remotePort = 7777
-const Version = 3
+const Version = 4
 
 type Config struct {
 	LocalAddr     string
