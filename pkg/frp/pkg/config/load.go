@@ -22,6 +22,7 @@ import (
 	"html/template"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 
 	toml "github.com/pelletier/go-toml/v2"
@@ -214,21 +215,40 @@ func LoadClientConfig(path string) (
 	legacyCommon.ServerPort = config.ServicePort
 	legacyCommon.ServerAddr = config.ServiceAddr
 	legacyCommon.Token = config.Token
-	legacyCommon.TLSEnable = true
-	legacyCommon.TCPMux = true
-	var loclConfig = legacy.LocalSvrConf{
+	var localConfig = legacy.LocalSvrConf{
 		LocalIP:   config.LocalAddr,
 		LocalPort: config.LocalPort,
 	}
-	var xx = legacy.BaseProxyConf{
-		ProxyType:    "tcp",
-		ProxyName:    config.Name,
-		LocalSvrConf: loclConfig,
+	fmt.Println(config.LocalPort, "=========")
+	switch config.ProxyType {
+	case "https":
+		localConfig.Plugin = "https2http"
+		localConfig.PluginParams = map[string]string{
+			"plugin_local_addr": config.LocalAddr + ":" + strconv.Itoa(config.LocalPort),
+		}
+		var xx = legacy.BaseProxyConf{
+			ProxyType:    "https",
+			ProxyName:    config.Name,
+			LocalSvrConf: localConfig,
+		}
+		legacyPxyCfgs["https"] = &legacy.HTTPSProxyConf{
+			BaseProxyConf: xx,
+			DomainConf: legacy.DomainConf{
+				CustomDomains: config.CustomDomains,
+			},
+		}
+	default:
+		var xx = legacy.BaseProxyConf{
+			ProxyType:    "tcp",
+			ProxyName:    config.Name,
+			LocalSvrConf: localConfig,
+		}
+		legacyPxyCfgs["tcp"] = &legacy.TCPProxyConf{
+			BaseProxyConf: xx,
+			RemotePort:    config.RemotePort,
+		}
 	}
-	legacyPxyCfgs["tcp"] = &legacy.TCPProxyConf{
-		BaseProxyConf: xx,
-		RemotePort:    config.RemotePort,
-	}
+
 	cliCfg = legacy.Convert_ClientCommonConf_To_v1(&legacyCommon)
 	for _, c := range legacyPxyCfgs {
 		pxyCfgs = append(pxyCfgs, legacy.Convert_ProxyConf_To_v1(c))

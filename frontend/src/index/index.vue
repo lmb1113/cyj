@@ -12,42 +12,52 @@
             <span>内网地址</span>
         </t-row>
         <t-row>
-            <t-row>
-                <t-col :span="24">
-                    <div>
-                        <t-input size="large" @input="handleInput" v-model="localhost"
-                            placeholder="请输入需要穿透的本地服务地址,例如(127.0.0.1:8081)"></t-input>
-                    </div>
-                </t-col>
-            </t-row>
-            <t-row v-if="remoteAddr != ''" style="margin-top: 20px;">
-                <span>外网地址</span>
-            </t-row>
-            <t-row v-if="remoteAddr != ''">
-                <t-input size="large" status="success" v-model="remoteAddr">
-                    <template #suffixIcon>
-                        <copy-icon @click="copy(remoteAddr)" />
-                    </template>
-                </t-input>
-            </t-row>
-            <t-row>
-                <div class="start-div" v-if="recording">
-                    <t-button size="large" theme="danger" style="width: 100%;margin-top: 20px;"
-                        @click="close()">停止穿透</t-button>
+            <t-col :span="24">
+                <div>
+                    <t-input size="large" @input="handleInput" v-model="localhost"
+                        placeholder="请输入需要穿透的本地服务地址,例如(127.0.0.1:8081)"></t-input>
                 </div>
-                <div class="start-div" v-else>
-                    <t-button size="large" theme="primary" style="width: 100%;margin-top: 20px;"
-                        @click="startRecording">开始穿透</t-button>
+            </t-col>
+        </t-row>
+        <t-row style="margin-top: 10px;">
+            <span>映射协议</span>
+        </t-row>
+        <t-row>
+            <t-col :span="24">
+                <div>
+                    <t-radio-group variant="default-filled" default-value="4" v-model="proxyType">
+                        <t-radio-button v-for="item in proxyTypeList" :value="item">{{ item }}</t-radio-button>
+                    </t-radio-group>
                 </div>
-            </t-row>
+            </t-col>
+        </t-row>
+        <t-row v-if="remoteAddr != ''" style="margin-top: 20px;">
+            <span>外网地址</span>
+        </t-row>
+        <t-row v-if="remoteAddr != ''">
+            <t-input size="large" status="success" v-model="remoteAddr">
+                <template #suffixIcon>
+                    <copy-icon @click="copy(remoteAddr)" />
+                </template>
+            </t-input>
+        </t-row>
+        <t-row>
+            <div class="start-div" v-if="recording">
+                <t-button size="large" theme="danger" style="width: 100%;margin-top: 20px;"
+                    @click="close()">停止穿透</t-button>
+            </div>
+            <div class="start-div" v-else>
+                <t-button size="large" theme="primary" style="width: 100%;margin-top: 20px;"
+                    @click="startRecording">开始穿透</t-button>
+            </div>
         </t-row>
         <t-row style=" position: absolute;bottom: 2%; left: 0;right: 0;">
             <div class="copyright-div">
                 <div>
                     <t-link style="margin: 5px;" theme="primary" @click="dialogVisible = true"
                         hover="color">使用指南</t-link>
-                    <t-link style="margin: 5px;" theme="primary"
-                        hover="color" @click="gotoBrowser('http://c.0a0a.cn')">软件官网</t-link>
+                    <t-link style="margin: 5px;" theme="primary" hover="color"
+                        @click="gotoBrowser('http://c.0a0a.cn')">软件官网</t-link>
                     <t-link style="margin: 5px;" theme="primary" target="_blank"
                         @click="gotoBrowser('https://qm.qq.com/q/lhm1yvQQN4')" hover="color">交流Q群</t-link>
                 </div>
@@ -81,6 +91,8 @@ import useClipboard from 'vue-clipboard3'
 import { setBodyBg } from '@/utils/utils';
 const localhost = ref("127.0.0.1:8080")
 const remoteAddr = ref("")
+const proxyType = ref("http")
+const proxyTypeList = ref(["http", "https"])
 const recording = ref(false)
 const dialogVisible = ref(false)
 import {
@@ -93,7 +105,7 @@ const handleInput = (value) => {
 }
 const startRecording = () => {
     recording.value = true
-    const response = Run(localhost.value);
+    const response = Run(localhost.value, proxyType.value);
     response.then((res) => {
         console.log(res)
         remoteAddr.value = res; // 设置返回值 

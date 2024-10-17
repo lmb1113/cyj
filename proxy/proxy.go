@@ -23,7 +23,7 @@ func NewProxy() *Options {
 	return o
 }
 
-func (o *Options) Run(addr string) (string, error) {
+func (o *Options) Run(addr string, proxyType string) (string, error) {
 	if !utils.ValidateIPPortFormat(addr) {
 		return "", errors.New("本地地址错误 [ip:端口]")
 	}
@@ -34,11 +34,13 @@ func (o *Options) Run(addr string) (string, error) {
 		return "", errors.New("本地地址错误 [ip:端口]")
 	}
 
+	config.ProxyType = proxyType
 	config.LocalAddr = info[0]
 	config.LocalPort, _ = strconv.Atoi(info[1])
 	config.RemotePort = utils.GenerateRemotePort()
 	global.SetConfig(config)
-	fmt.Println(addr)
+	fmt.Printf("%+v", config)
+
 	service, err := sub.RunClient("")
 	if err != nil {
 		fmt.Println(err.Error())

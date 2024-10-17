@@ -141,7 +141,7 @@ func startService(
 		defer log.Info("frpc service for config file [%s] stopped", cfgFile)
 	}
 
-	fmt.Printf("%d\n", pxyCfgs[0].(*v1.TCPProxyConfig).RemotePort)
+	//fmt.Printf("%d\n", pxyCfgs[0].(*v1.TCPProxyConfig).RemotePort)
 	svr, err := client.NewService(cfg, pxyCfgs, visitorCfgs, cfgFile)
 	if err != nil {
 		return nil, err

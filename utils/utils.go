@@ -36,3 +36,14 @@ func GenerateRemotePort() int {
 func GenerateName() string {
 	return uuid.New().String()
 }
+
+var letterRunes = []rune("abcdefghijklmnopqrstuvwxyz0123456789")
+
+// RandomString 生成随机字符串
+func RandomString(n int, seed int64) string {
+	b := make([]rune, n)
+	for i := range b {
+		b[i] = letterRunes[rand.Intn(len(letterRunes))]
+	}
+	return string(b)
+}
