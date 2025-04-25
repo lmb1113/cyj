@@ -57,28 +57,48 @@
                     <t-link style="margin: 5px;" theme="primary" @click="dialogVisible = true"
                         hover="color">使用指南</t-link>
                     <t-link style="margin: 5px;" theme="primary" hover="color"
-                        @click="gotoBrowser('http://c.0a0a.cn')">软件官网</t-link>
+                        @click="gotoBrowser('https://c.0a0a.cn')">软件官网</t-link>
                     <t-link style="margin: 5px;" theme="primary" target="_blank"
                         @click="gotoBrowser('https://qm.qq.com/q/lhm1yvQQN4')" hover="color">交流Q群</t-link>
                 </div>
-                <p style="font-size: 10px;">©穿云箭 2018-2024 使用协议</p>
-                <p style="font-size: 10px;">version 1.0.5</p>
+                <p style="font-size: 10px;">©穿云箭 2018-2025 使用协议</p>
+                <p style="font-size: 10px;">version 1.0.6</p>
             </div>
         </t-row>
         <t-dialog title="常见问题指南" v-model:visible="dialogVisible" width="90%"
             :on-confirm="() => (dialogVisible = false)">
-            <h5>1.问:什么是穿云箭</h5>
-            <span>答:为爱发电，内网穿透工具，适用于本地服务的外网访问</span>
-            <h5>2.问:可以翻墙么</h5>
-            <span>答:不可以，并非VPN，只是一种内网穿透工具</span>
-            <h5>3.问:浏览器直接访问提示net::ERR_CERT_AUTHORITY_INVALID</h5>
-            <span>答:因为证书问题导致，不影响使用，点击【高级】-【继续前往】</span>
-            <h5>4.问:有使用案例么</h5>
-            <span>第一步 例如本地有个服务端口是12345 这样代理地址就填写127.0.0.1:12345</span>
-            <br>
-            <span>第二步 点击[开始穿透]</span>
-            <br>
-            <span>第三步 下方会出现类似于 c.0a0a.cn:11111 这样的地址，这是穿透后的外网地址，这任何地点的有网络的设备、浏览器都可以直接进行访问这个地址</span>
+            <div class="qa">
+                <span class="qa-title">1.问:什么是穿云箭？</span>
+                <span class="qa-context">答:为爱发电，内网穿透工具，适用于本地端口的外网访问</span>
+            </div>
+            <div class="qa">
+                <span class="qa-title">2.问:可以翻墙吗？</span>
+                <span class="qa-context">答:不可以，并非VPN，只是一种内网穿透工具</span>
+            </div>
+            <div class="qa">
+                <span class="qa-title">3.问:有使用案例么</span>
+                <div class="qa-context">
+                    <div class="qa-context-div">
+                        <div style="background-color:#dee3e9;padding: 5px;border-radius: 5px;">
+                            <t-tag theme="success">联调篇</t-tag>
+                            来自深圳的后端小明同学开了一个java服务，使用的是8080端口，此时远在北京的前端小李同学需要访问这个服务进行调试，但是发布到测试环境又不方便调试，此时小明就可以用本工具，填写127.0.0.1:8080，点击开启穿透，将地址发给小李同学访问
+                        </div>
+                    </div>
+                    <div class="qa-context-div">
+                        <div style="background-color:#dee3e9;padding: 5px;border-radius: 5px;">
+                            <t-tag theme="primary">对接篇</t-tag>
+                            真实案例，某信/某宝的支付对接，需要回调支付成功接口，此时如果先写好代码再打包到测试环境，只能依赖日志进行调试，但是有了此工具，可以使用穿透将支付成功的请求直接访问到本地进行断点调试，开发效率拉满！！！
+                        </div>
+                    </div>
+                    <div class="qa-context-div">
+                        <div style="background-color:#dee3e9;padding: 5px;border-radius: 5px;">
+                            <t-tag theme="danger">其他篇</t-tag>
+                            更多功能，期待您的挖掘
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </t-dialog>
     </div>
 </template>
@@ -213,6 +233,24 @@ function gotoBrowser(url) {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+}
+
+.qa-title {
+    font-weight: bold;
+    size: 16px;
+}
+
+.qa-context {
+    size: 16px;
+}
+
+.qa {
+    display: flex;
+    flex-direction: column;
+}
+
+.qa-context-div {
+    margin-top: 5px;
 }
 </style>
 <style>

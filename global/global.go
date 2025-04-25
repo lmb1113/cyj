@@ -8,7 +8,7 @@ import (
 )
 
 const remotePort = 7777
-const Version = 4
+const Version = 6
 
 type Config struct {
 	LocalAddr     string
@@ -26,7 +26,7 @@ type Config struct {
 
 func (c *Config) GetProxyUrl() string {
 	if c.ProxyType == "https" {
-		return fmt.Sprintf("https://%s:%d", c.CustomDomains[0], 1443)
+		return fmt.Sprintf("https://%s", c.CustomDomains[0])
 	}
 	return fmt.Sprintf("http://%s:%d", c.RemoteAddr, c.RemotePort)
 }
