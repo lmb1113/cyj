@@ -1,4 +1,5 @@
 {
+  "version": "1.0.6",
   "name": "穿云箭",
   "outputfilename": "穿云箭",
   "assetdir": "frontend/dist",
@@ -11,5 +12,17 @@
   "author": {
     "name": "清欢",
     "email": "1269985906@qq.com"
+  },
+  "info": {
+    "companyName": "穿云箭",
+    "productName": "穿云箭",
+    "productVersion": "1.0.6",
+    "copyright": "清欢 github.com/lmb1113 版权所有",
+    "comments": "",
+    "protocols": [
+      {
+        "scheme": "qhcyj"
+      }
+    ]
   }
 }
