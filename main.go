@@ -13,7 +13,7 @@ import (
 	"github.com/wailsapp/wails/v2/pkg/options/windows"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 	"log"
-	_ "net/http/pprof"
+	//_ "net/http/pprof"
 )
 
 const lockUniqueId = "C04B4B88-2B22-3ADE-9DFE-551EBA430D19"
@@ -25,7 +25,6 @@ var assets embed.FS
 var icon []byte
 
 func main() {
-
 	// Create an instance of the app structure
 	// 创建一个App结构体实例
 	app := NewApp()
