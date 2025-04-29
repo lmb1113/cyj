@@ -21,5 +21,6 @@ func main() {
 	v1Api := server.Group("/api")
 	v1Api.GET("/config", controller.Config)
 	v1Api.GET("/update", controller.Update)
+	v1Api.GET("/download", controller.Download)
 	server.Run(serverPort)
 }
