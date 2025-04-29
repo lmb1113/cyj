@@ -1,5 +1,5 @@
 {
-  "version": "1.0.6",
+  "version": "1.0.7",
   "name": "穿云箭",
   "outputfilename": "穿云箭",
   "assetdir": "frontend/dist",
@@ -16,7 +16,7 @@
   "info": {
     "companyName": "穿云箭",
     "productName": "穿云箭",
-    "productVersion": "1.0.6",
+    "productVersion": "1.0.7",
     "copyright": "清欢 github.com/lmb1113 版权所有",
     "comments": "",
     "protocols": [

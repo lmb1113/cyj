@@ -1,5 +1,0 @@
-version = 6
-name = "穿云箭"
-desc = "穿云箭-内网究极神器"
-##apiBaseUrl = "http://127.0.0.1:10033/api"
-apiBaseUrl = "https://c.0a0a.cn/api"

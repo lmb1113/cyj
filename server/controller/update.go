@@ -10,9 +10,9 @@ import (
 func Update(c *gin.Context) {
 	var resp dto.CheckUpdateResp
 	version, _ := strconv.Atoi(c.GetString("x-version"))
-	if version < 6 {
+	if version < 7 {
 		resp.NeedUpdate = true
-		resp.Url = "https://c.0a0a.cn/cyj/1.0.6.exe"
+		resp.Url = "https://c.0a0a.cn/cyj/1.0.7.exe"
 		resp.Msg = "优化更多功能"
 	} else {
 		resp.NeedUpdate = false
