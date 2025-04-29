@@ -1,16 +1,12 @@
 package global
 
 import (
-	"cyj/utils"
+	"cyj/config"
 	"fmt"
 	"sync"
-	"time"
 )
 
-const remotePort = 7777
-const Version = 6
-
-type Config struct {
+type ClineInfo struct {
 	LocalAddr     string
 	LocalPort     int
 	RemotePort    int
@@ -24,7 +20,7 @@ type Config struct {
 	CustomDomains []string
 }
 
-func (c *Config) GetProxyUrl() string {
+func (c *ClineInfo) GetProxyUrl() string {
 	if c.ProxyType == "https" {
 		return fmt.Sprintf("https://%s", c.CustomDomains[0])
 	}
@@ -33,27 +29,27 @@ func (c *Config) GetProxyUrl() string {
 
 var once sync.Once
 
-func NewDefaultConfig() *Config {
-	subDomain := utils.RandomString(8, time.Now().UnixMicro())
+func NewDefaultConfig() *ClineInfo {
 	once.Do(func() {
-		gConfig = &Config{
-			ServicePort:   remotePort,
-			ServiceAddr:   "c.0a0a.cn",
-			Token:         "12345",
-			RemoteAddr:    "c.0a0a.cn",
-			Name:          utils.GenerateName(),
-			CustomDomains: []string{subDomain + ".c.0a0a.cn"},
+		gConfig = &ClineInfo{
+			ServicePort:   config.Config().ServerPort,
+			ServiceAddr:   config.Config().ServerAddr,
+			Token:         config.Config().Token,
+			RemoteAddr:    config.Config().HttpDomain,
+			Name:          config.Config().ClientName,
+			CustomDomains: config.Config().HttpsDomains,
+			RemotePort:    config.Config().FrpPort,
 		}
 	})
 	return gConfig
 }
 
-var gConfig *Config
+var gConfig *ClineInfo
 
-func SetConfig(config *Config) {
+func SetClientInfo(config *ClineInfo) {
 	gConfig = config
 }
 
-func GetConfig() *Config {
+func GetClientInfo() *ClineInfo {
 	return gConfig
 }

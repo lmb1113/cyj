@@ -209,7 +209,7 @@ func LoadClientConfig(path string) (
 	//		visitorCfgs = append(visitorCfgs, c.VisitorConfigurer)
 	//	}
 	//}
-	config := global.GetConfig()
+	config := global.GetClientInfo()
 	var legacyCommon = legacy.GetDefaultClientConf()
 	var legacyPxyCfgs = make(map[string]legacy.ProxyConf)
 	legacyCommon.ServerPort = config.ServicePort
@@ -219,7 +219,6 @@ func LoadClientConfig(path string) (
 		LocalIP:   config.LocalAddr,
 		LocalPort: config.LocalPort,
 	}
-	fmt.Println(config.LocalPort, "=========")
 	switch config.ProxyType {
 	case "https":
 		localConfig.Plugin = "https2http"

@@ -2,8 +2,10 @@ package main
 
 import (
 	"context"
-	"cyj/update"
+	"cyj/service/config"
+	"cyj/service/update"
 	"cyj/utils"
+	"log"
 )
 
 // App struct
@@ -22,6 +24,12 @@ func NewApp() *App {
 func (a *App) startup(ctx context.Context) {
 	// Perform your setup here
 	// 在这里执行初始化设置
+	err := config.HandleConfigInit()
+	if err != nil {
+		log.Fatalln(err, "初始化失败")
+	} else {
+		log.Println(err, "初始化成功")
+	}
 	a.ctx = ctx
 }
 

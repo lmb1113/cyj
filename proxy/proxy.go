@@ -37,9 +37,7 @@ func (o *Options) Run(addr string, proxyType string) (string, error) {
 	config.ProxyType = proxyType
 	config.LocalAddr = info[0]
 	config.LocalPort, _ = strconv.Atoi(info[1])
-	config.RemotePort = utils.GenerateRemotePort()
-	global.SetConfig(config)
-	fmt.Printf("%+v", config)
+	global.SetClientInfo(config)
 
 	service, err := sub.RunClient("")
 	if err != nil {
@@ -47,7 +45,6 @@ func (o *Options) Run(addr string, proxyType string) (string, error) {
 		return "", err
 	}
 	o.Service = service
-	fmt.Printf("%+v", config.GetProxyUrl())
 	return config.GetProxyUrl(), nil
 }
 

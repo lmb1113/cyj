@@ -1,12 +1,29 @@
 package utils
 
 import (
+	"errors"
 	"fmt"
 	"github.com/google/uuid"
 	"math/rand"
+	"os"
 	"regexp"
 	"runtime/debug"
+	"time"
 )
+
+func PathExists(path string) (bool, error) {
+	fi, err := os.Stat(path)
+	if err == nil {
+		if fi.IsDir() {
+			return true, nil
+		}
+		return false, errors.New("存在同名文件")
+	}
+	if os.IsNotExist(err) {
+		return false, nil
+	}
+	return false, err
+}
 
 func Go(x func()) {
 	go func() {
@@ -46,4 +63,14 @@ func RandomString(n int, seed int64) string {
 		b[i] = letterRunes[rand.Intn(len(letterRunes))]
 	}
 	return string(b)
+}
+
+func GetRandomElement[T any](slice []T) (T, error) {
+	if len(slice) == 0 {
+		var zero T
+		return zero, fmt.Errorf("切片不能为空")
+	}
+	rand.Seed(time.Now().UnixNano())
+	index := rand.Intn(len(slice))
+	return slice[index], nil
 }
